@@ -6,7 +6,7 @@ topics: ["Rails","Docker","Heroku"]
 published: true
 ---
 
-※この記事では、Ruby on RailsアプリをDockerで構築する方法は扱っていません（今後執筆予定）。
+※この記事では、Ruby on RailsアプリをDockerで構築する方法については扱っていません（今後執筆予定）。
 
 ## 1. herokuコマンドのインストール
 
