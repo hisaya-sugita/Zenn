@@ -1,9 +1,9 @@
 ---
 title: "Dockerで構築したRuby on RailsアプリをHerokuにデプロイするまで"
-emoji: "🐡"
+emoji: "💪"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Rails","Docker","Heroku"]
-published: false
+published: true
 ---
 
 ## 1. herokuコマンドのインストール
