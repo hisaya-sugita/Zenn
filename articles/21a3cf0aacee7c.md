@@ -58,6 +58,14 @@ $ heroku addons:create heroku-postgresql:hobby-dev
 $ heroku addons:create cleardb:ignite
 ```
 
+上のコマンドを実行すると`CLEARDB_DATABASE_URL`という環境変数が追加されるので、その情報をもとに必要な環境変数を確認します。
+
+```bash
+$ heroku config
+CLEARDB_DATABASE_URL: mysql://[ユーザー名]:[パスワード]@[ホスト名]/[データベース名]?reconnect=true
+...
+```
+
 ## 7. 環境変数の登録
 
 この辺りは各環境によって異なると思うので、よしなにしてください。
