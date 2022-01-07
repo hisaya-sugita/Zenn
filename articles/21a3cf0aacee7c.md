@@ -2,7 +2,7 @@
 title: "【Rails7】DockerでRuby on Railsアプリを構築してHerokuにデプロイするまで"
 emoji: "💪"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["Rails7","Rails","Docker","Heroku"]
+topics: ["Rails","Docker","Heroku"]
 published: true
 ---
 
