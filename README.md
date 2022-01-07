@@ -21,5 +21,5 @@ npx zenn new:book --slug xxx
 ## ブラウザでプレビュー
 
 ```bash
-npx zenn preview --port 8000
+open http://localhost:8000 && npx zenn preview --port 8000
 ```
