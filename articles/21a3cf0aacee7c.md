@@ -48,13 +48,13 @@ gem "rails", "~> 7.0.0"
 $ bundle install --path vendor/bundle
 ```
 
-最後に`rails new`をしてRailsアプリの雛形が完成です。
+`rails new`をしてRailsアプリの雛形を作ります。
 
 ```
 echo y | bundle exec rails new . -d postgresql --skip-bundle --skip-turbolinks --skip-system-test
 ```
 
-※ このままだとHerokuにデプロイした際にBlocked hostエラーが発生するので、`config/environments/development.rb`に下記を追記します。
+このままだとHerokuにデプロイした際にBlocked hostエラーが発生するので、`config/environments/development.rb`に下記を追記します。
 
 ```ruby:config/environments/development.rb
 Rails.application.configure do
@@ -257,14 +257,14 @@ $ heroku config:add DATABASE_URL='mysql://[ユーザー名]:[パスワード]@[�
 $ heroku config:add DATABASE_URL='mysql2://[ユーザー名]:[パスワード]@[ホスト名]/[データベース名]?reconnect=true'
 ```
 
-## 6. 作成したファイルをコミット
+## 5. 作成したファイルをコミット
 
 ```bash
 $ git add .
 $ git commit -m "create rails app"
 ```
 
-## 7. アプリのスタックをcontainerに設定
+## 6. アプリのスタックをcontainerに設定
 
 ```bash
 $ heroku stack:set container
