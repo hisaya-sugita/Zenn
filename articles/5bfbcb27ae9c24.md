@@ -12,6 +12,10 @@ published: false
 bundle exec rails generate scaffold account name:string
 ```
 
+```bash
+bundle exec rails generate controller users index show
+```
+
 ## migration
 
 ```bash
