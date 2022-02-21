@@ -155,17 +155,7 @@ bundle exec rails server -b '0.0.0.0' -p ${PORT:-3000}
 bundle exec rails server -b '0.0.0.0' -p ${PORT:-3000}
 ```
 
-## 4. `heroku.yml`
-
-```yml:heroku.yml
-build:
-  docker:
-    web: Dockerfile
-```
-
-`heroku.yml`はシンプルに`Dockerfile`のパス（`heroku.yml`の相対パス）を指定するだけでOKです。
-
-## 5. 確認
+## 4. 確認
 
 ここまでで作成したファイルを確認します。
 
@@ -187,7 +177,6 @@ $ tree -L 1 -a
 ├── config.ru
 ├── db
 ├── entrypoint.sh
-├── heroku.yml
 ├── lib
 ├── log
 ├── public
@@ -202,6 +191,8 @@ $ tree -L 1 -a
 次にHerokuへのデプロイの準備をしていきます。
 
 ## 1. herokuコマンドのインストール
+
+herokuコマンドがインストールされていない場合は、インストールします。
 
 ```bash
 $ brew tap heroku/brew && brew install heroku
@@ -264,18 +255,12 @@ $ git add .
 $ git commit -m "create rails app"
 ```
 
-## 6. アプリのスタックをcontainerに設定
-
-```bash
-$ heroku stack:set container
-```
-
 # Herokuへのデプロイと動作確認
 
 ## 1. アプリをHerokuにデプロイ
 
 ```bash
-$ git push heroku main
+$ git push origin main
 ```
 
 ## 2. 動作確認
