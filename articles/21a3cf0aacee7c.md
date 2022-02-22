@@ -49,9 +49,10 @@ $ bundle install --path vendor/bundle
 ```
 
 `rails new`をしてRailsアプリの雛形を作ります。
+※ databaseに`postgresql`を指定していますが、MySQLを使用する場合は`mysql`を指定してください。
 
 ```
-echo y | bundle exec rails new . -d postgresql --skip-bundle --skip-turbolinks --skip-system-test
+$ echo y | bundle exec rails new . -d postgresql --skip-bundle --skip-turbolinks --skip-system-test
 ```
 
 このままだとHerokuにデプロイした際にBlocked hostエラーが発生するので、`config/environments/development.rb`に下記を追記します。
@@ -162,6 +163,7 @@ bundle exec rails server -b '0.0.0.0' -p ${PORT:-3000}
 ```bash
 $ tree -L 1 -a
 .
+├── .bundle
 ├── .git
 ├── .gitattributes
 ├── .gitignore
@@ -251,6 +253,7 @@ $ heroku config:add DATABASE_URL='mysql2://[ユーザー名]:[パスワード]@[
 ## 5. 作成したファイルをコミット
 
 ```bash
+$ bundle lock --add-platform x86_64-linux # MacOSを使用している場合
 $ git add .
 $ git commit -m "create rails app"
 ```
@@ -260,7 +263,7 @@ $ git commit -m "create rails app"
 ## 1. アプリをHerokuにデプロイ
 
 ```bash
-$ git push origin main
+$ git push heroku main
 ```
 
 ## 2. 動作確認
