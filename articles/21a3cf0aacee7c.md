@@ -6,7 +6,7 @@ topics: ["Rails","Docker","Heroku"]
 published: true
 ---
 
-こんにちは。Hisayaです。
+こんにちは！[@hisaya_sugita](https://twitter.com/hisaya_sugita)です！
 今回は、DockerでRuby on Railsアプリを構築してHerokuにデプロイするまでの手順を解説を交えながら（備忘録も兼ねて）記事に残したいと思います。
 
 # 環境
